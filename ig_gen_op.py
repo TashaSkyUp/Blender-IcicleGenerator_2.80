@@ -3,7 +3,7 @@ from bpy.types import Operator
 
 import bmesh
 from mathutils import Vector
-from math import pi
+#from math import pi
 import random
 
 class WM_OT_GenIcicle(Operator):
@@ -28,7 +28,7 @@ class WM_OT_GenIcicle(Operator):
             # Adjust the Z-height to account for the depth of the cone
             # As pivot point is in the centre of the mesh
             location = loc_vector - (cone_depth / 2) * Vector((0, 0, 1)),
-            rotation = (pi, 0.0, 0.0))
+            rotation = (3.14159265359, 0.0, 0.0))
 
     # Get z co-ordinate, used for sorting
     def get_z(self, vert):
