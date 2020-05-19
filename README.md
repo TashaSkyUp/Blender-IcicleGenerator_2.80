@@ -1,3 +1,7 @@
+# Blender-IcicleGenerator_2.82
+* under development
+* not working yet
+
 # Blender-IcicleGenerator_2.80
 Icicle Generator updated for Blender 2.80
 
