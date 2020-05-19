@@ -23,8 +23,7 @@ class WM_OT_GenIcicle(Operator):
             radius1 = base_rad,
             radius2 = 0.0,
             depth = cone_depth,
-            end_fill_type = cone_cap,
-            view_align = False,
+            end_fill_type = cone_cap,            
             # Adjust the Z-height to account for the depth of the cone
             # As pivot point is in the centre of the mesh
             location = loc_vector - (cone_depth / 2) * Vector((0, 0, 1)),
