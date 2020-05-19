@@ -1,7 +1,7 @@
 bl_info = {"name":"Icicle Generator",
-           "author":"Eoin Brennan (Mayeoin Bread)",
-           "version":(2,5),
-           "blender":(2,80,0),
+           "author":"Eoin Brennan (Mayeoin Bread), Tasha Upchurch (Thalia(HMG))",
+           "version":(2,5,1),
+           "blender":(2,82,0),
            "location":"3D View > Tools",
            "description":"Adds a linear string of icicles of different sizes",
            "warning":"",
@@ -34,7 +34,7 @@ class MyProperties(PropertyGroup):
         description='Maximum radius of a cone',
         default=0.15,
         min=0.01,
-        max=1.0,
+        max=1000.0,
         unit='LENGTH'
     )
 
@@ -43,7 +43,7 @@ class MyProperties(PropertyGroup):
         description='Minimum radius of a cone',
         default=0.025,
         min=0.01,
-        max=1.0,
+        max=1000.0,
         unit='LENGTH'
     )
 
@@ -52,7 +52,7 @@ class MyProperties(PropertyGroup):
         description='Maximum depth (height) of a cone',
         default=2.0,
         min=0.0,
-        max=2.0,
+        max=1000.0,
         unit='LENGTH'
     )
 
@@ -61,7 +61,7 @@ class MyProperties(PropertyGroup):
         description='Minimum depth (height) of a cone',
         default=1.5,
         min=0.0,
-        max=2.0,
+        max=1000.0,
         unit='LENGTH'
     )
 
@@ -78,7 +78,7 @@ class MyProperties(PropertyGroup):
         description='Max number of kinks on a cone',
         default=3,
         min=0,
-        max=8
+        max=128
     )
 
     max_its: IntProperty(
@@ -86,7 +86,7 @@ class MyProperties(PropertyGroup):
         description='Number of iterations before giving up, prevents freezing/crashing',
         default=50,
         min=1,
-        max=100
+        max=1000
     )
 
     reselect_base: BoolProperty(
